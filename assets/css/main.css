@@ -1731,11 +1731,12 @@
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
 		border-bottom: dotted 1px;
-		color: inherit;
+		color: #5b72a1;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
+			color: #5b72a1;
 		}
 
 	strong, b {
@@ -3816,7 +3817,7 @@
 
 		#main > .main {
 			  /* padding: 5em 5em 3em 5em ; */
-  			padding: 2em 2em 1em 2em ; */
+  			padding: 2em 2em 1em 2em ; 
 
 			border-top: solid 1px #dddddd;
 		}
