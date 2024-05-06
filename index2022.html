@@ -7,13 +7,13 @@
 -->
 <html>
 <head>
-		<title>Self Supervised Learning: What is Next? - ECCV 2024</title>
+		<title>Self Supervised Learning: What is Next? - ECCV 2022</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta property='og:title' content="Self Supervised Learning: What is Next? - ECCV 2024"/>
+    <meta property='og:title' content="Self Supervised Learning: What is Next? - ECCV 2022"/>
     <!-- <meta property='og:image' content='http://sightsound.org/dog-sight-sound11.png /> -->    
 	</head>
 	<body>
@@ -22,17 +22,10 @@
             <!-- Header-->
             <header id="header" class = "alt" style = "width: 100%">
                 <!-- <div class = "bgimg" style = "height: 475px">-->
-                <div class = "bgimg" style = "height: 150px; width: 100%">
+                <div class = "bgimg" style = "height: 250px; width: 100%">
                   <div style = "height: 20px; width: 100%"></div>
                   <h1 style = "text-shadow: 0.1px 0.1px #000000">Self Supervised Learning: What is Next?</h1>
-                  <a href="https://eccv2024.ecva.net/" style="text-decoration: none; color: inherit;">
-                    <h2 style="text-shadow: 0.1px 0.1px #000000">ECCV 2024 - MiCo Milano</h2>
-                </a>
-                                  <!-- <h2 style = "text-shadow: 0.1px 0.1px #000000">Organizers: Michael Dorkenwald, Mert Bulent Sariyildiz, Christian Rupprecht, Hilde Kuehne, Serge Belongie. </h2> -->
-
-                  
-
-                  <!-- <h2 style = "text-shadow: 0.1px 0.1px #000000">ECCV 2024 - October 23rd, David Intercontinental Hotel, Salon C</h2> -->
+                  <h2 style = "text-shadow: 0.1px 0.1px #000000">ECCV 2022 - October 23rd, David Intercontinental Hotel, Salon C</h2>
                 </div>
             </header>
 
@@ -42,11 +35,11 @@
                     <li><a href="#intro" class="active">Introduction</a></li>
                     <!-- <li><a href="#videos">Videos</a></li> -->
                     <li><a href="#format">Format</a></li>
-                    <!-- <li><a href="#cfp">Call for Papers</a></li> -->
+                    <li><a href="#cfp">Call for Papers</a></li>
                     <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#speakers">Speakers</a></li>
                     <li><a href="#info">Organizers</a></li>
-                    <li><a href="index2022.html">ECCV 2022</a></li>
+                    <li><a href="index2020.html">ECCV 2020</a></li>
                 </ul>
             </nav>
 
@@ -57,35 +50,35 @@
                     <header class="major" style="text-align:center">
                         <h2>Summary</h2>
                     </header>
-                    <div class="spotlight" style="width: 90%; margin: auto;">
+                    <div class="spotlight" style = "width: 90%">
                         <div class="content">
                             <p>
-                            Training robust visual models from unlabeled data is a long-standing problem, as human-provided annotations are often costly, error-prone, and incomplete. Consequently, self-supervised learning (SSL) has become an attractive research direction for learning generic visual representations useful for a wide range of downstream tasks such as classification and semantic segmentation.
-                            SSL operates on the principle of pretext tasks, self-generated challenges that encourage models to learn from the data's inherent structure.
-                            Initially, these tasks were relatively simplistic, such as predicting the rotation of an image or restoring its original colors. These early experiments laid the groundwork for more sophisticated techniques that extract deeper understandings from visual content through, e.g. contrastive learning or deep clustering.
+                                The past two years have seen major advances in self-supervised learning, with many new methods reaching astounding performances on standard benchmarks. Moreover, many recent works have shown the large potential of coupled data sources such as image-text in producing even stronger models capable of zero-shot tasks, and often inspired by NLP.
+                                We have just witnessed a jump from the "default" single-modal pretraining with CNNs to Transformer-based multi-modal training, and these early developments will surely mature in the coming months. 
+                                However, despite this it is also apparent that there are still major unresolved challenges and it is not clear what the next step-change is going to be. 
+                                In this workshop we want to highlight and provide a forum to discuss potential research direction seeds, from radically new self-supervision tasks, data sources and paradigms to surprising counter-intuitive results.
+                                Through invited speakers and paper oral talks, our goal is to provide a forum to discuss and exchange ideas where both the leaders in this field, as well as the new, younger generation can equally contribute to discussing the future of this field.
                             </p>
                             <p>
-                            Although these methods have already outperformed supervised representations in numerous downstream tasks, the field continues to advance at an unprecedented pace, introducing many new techniques.
-                            Some of the directions are predictive architectures removing the need for augmentation, masked image modeling, auto-regressive approaches, leveraging the self-supervision signals in videos, and 
-                            exploiting the representations of generative models.
+                                A major goal of unsupervised learning in computer vision is to learn general data representations without labels. 
+                                For this, countless pretext tasks such as image colorization and more recently contrastive learning and teacher-student approaches have been proposed to learn neural networks for feature extraction. 
+                                While these methods are rapidly improving in performance and have surpassed supervised representations on many downstream tasks, many challenges remain and the ``next big step'' is not apparent.
                             </p>
                             <p>
-                                With so many new techniques flooding the field, it is important to pause and discuss how we can make optimal use of self-supervised representations in applications, as well as what are the remaining obstacles and possible approaches to tackle them.
-                                The workshop aims to give space to ask and discuss fundamental, longer-term questions with researchers leading this area.
+                                As the methods are maturing, the field is now at the point where we have to start discussing how we can make optimal use of self-supervised representations in applications, as well as what are the remaining obstacles and possible approaches to tackle them.
+                                The workshop aims to give space to ask and discuss fundamental, longer-term questions with  researchers that are leading this area.
                                 Key questions we aim to tackle include:
-                                <ul style="padding-left: 20px;">
+                                <ul>
                                     <li>What are the current bottlenecks in self-supervised learning?</li>
-                                    <li>What is the role of SSL in the era of powerful image-text models?</li>
-                                    <li>What can only or never be learned purely from self-supervision?</li>
-                                    <li>What is the role of generative modeling for representation learning?</li>
-                                    <li>Is SSL the new `pre-pretraining' paradigm, allowing to scale beyond coupled image-text data?</li>
-                                    <li>What biases emerge in SSL models, and what are the implications?</li>
-                                    <li>What is the role of multi-modal learning for robustness and understanding?</li>
-                                    <li>What is the fundamental role of data augmentation and synthetic data?</li>
+                                    <li>What is the future role of weak supervision, like image-text and video+ASR?</li>
+                                    <li>What can never be learned purely from self-supervision?</li>
+                                    <li>How many modalities do we need for true robustness and understanding?</li>
+                                    <li>What is the fundamental role of data augmentation?</li>
+                                    <li>Which kind of bias may be captured in the resulting models, and what does this imply?</li>
                                 </ul>
                             </p>
                             <p>
-                                This is the third iteration of the SSL-WIN workshop. The workshop will be organized as a half-day event where a series of invited speakers and a students at the poster sessions will present their views on how the field needs to evolve in the coming years. 
+                                This is the second iteration of the SSL-WIN workshop. The workshop will be organized as a hybrid full-day event where a series of invited speakers and oral talks from the submitted papers will present their views on how the field needs to evolve in the coming years. 
                             </p>
                         </div>
                     </div>
@@ -94,10 +87,10 @@
                     <header class="major" style="text-align:center">
                         <h2>Format</h2>
                     </header>
-                    <div class="spotlight" style="width: 90%; margin: auto;">
+                    <div class="spotlight" style = "width: 90%">
                         <div class="content">
                             <p>
-                                The workshop is a half-day event. It will consist of a series of invited talks on recent developments on self-supervised learning from the leading experts in academia and industry as well as a poster session. The poster sessions features the latest works on SSL.
+                                The workshop is a full-day event. It will consist of a series of invited talks on recent developments on self-supervised learning from the leading experts in academia and industry as well as a poster session. Several successful submissions to the call for papers will be selected to be presented in the workshop as a contributed talk. Proceedings will be published as part of the workshop. 
                             </p>
                         </div>
                     </div>
@@ -107,8 +100,8 @@
                     <header class="major" style="text-align:center">
                         <h2>Schedule</h2>
                     </header>
-                    <p> TBD.</p>
-                    <!-- <div class="table-wrapper" style ="width:100%">
+                    <p>The workshop will take place on October 23rd, in the David Intercontinental Hotel, Salon C. Times are Tel Aviv time.</p>
+                    <div class="table-wrapper" style ="width:100%">
                         <table class="alt">
                             <tbody>
                                 <col width="20%">
@@ -194,7 +187,7 @@
                                 </tr>
                         </tbody>
                       </table>
-                  </div> -->
+                  </div>
                 </section>
 
                 <section id="speakers" class="main special">
@@ -204,13 +197,14 @@
                     <div class="table-wrapper" style ="width:100%">
                         <table cellpadding = "0" cellspacing = "0">
                             <tr>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/asano.jpg"><br><a href="https://yukimasano.github.io/">Yuki M Asano<br>Uni. of Amsterdam</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/yutong.png"><br><a href="https://yutongbai.com/">Yutong Bai<br>UC Berkeley</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/lecun.jpeg"><br><a href="http://yann.lecun.com/">Yann LeCun<br>Facebook & NYU</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/alayrac.jpg"><br><a href="https://www.jbalayrac.com/">Jean-Baptiste Alayrac<br>DeepMind</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/caron.jpg"><br><a href="https://scholar.google.com/citations?user=eiB0s-kAAAAJ&hl=fr">Mathilde Caron<br>Google</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/efros.jpg"><br><a href="https://people.eecs.berkeley.edu/~efros/">Alexei (Alyosha) Efros<br>UC Berkeley</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/misra.jpg"><br><a href="https://imisra.github.io/">Ishan Misra<br>FAIR</a></td> 
                             </tr><tr>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/khe.jpeg"><br><a href="https://people.csail.mit.edu/kaiming/">Kaiming He<br>MIT</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/olivierhenaff.jpg"><br><a href="https://www.olivierhenaff.com/">Olivier J. Hénaff<br>DeepMind</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/osimeoni.png"><br><a href="https://osimeoni.github.io/">Oriane Siméoni<br>valeo.ai</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/nagrani.jpg"><br><a href="https://a-nagrani.github.io/">Arsha Nagrani<br>Google AI Research</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/smith.jpg"><br><a href="https://cogdev.lab.indiana.edu/">Linda Smith<br>Indiana University</a></td>
+                                <td><img class="rounded-img-dark" height="125px" src="photos/vedaldi.jpg"><br><a href="https://www.robots.ox.ac.uk/~vedaldi">Andrea Vedaldi<br>University of Oxford</td>
 				            </tr>
                         </table>
                     </div>
@@ -223,11 +217,10 @@
                     <div class="table-wrapper" style ="width:100%">
                         <table cellpadding = "0" cellspacing = "0">
                             <tr>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/mdorkenwald.jpeg"><br><a href = "https://mdorkenwald.com/">Michael Dorkenwald<br> University of Amsterdam</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/mert.png"><br><a href = "https://mbsariyildiz.github.io/">Mert Bulent Sariyildiz<br>NAVER Labs</a></td>
+                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/asano.jpg"><br><a href = "https://yukimasano.github.io/">Yuki M Asano<br> University of Amsterdam</a></td>
                                 <td><img class = "rounded-img-dark" height = "125px" src = "photos/rupprecht.jpg"><br><a href = "http://chrirupp.github.io">Christian Rupprecht<br>University of Oxford</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/Hilde.jpg"><br><a href = "https://hildekuehne.github.io/">Hilde Kuehne<br>University of Bonn</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/sbelongie.png"><br><a href = "https://sergebelongie.github.io/">Serge Belongie<br>University of Copenhagen</td>
+                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/larlus.jpg"><br><a href = "https://dlarlus.github.io/">Diane Larlus<br>NAVER LABS Europe</a></td>
+                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/zisserman.jpg"><br><a href = "https://www.robots.ox.ac.uk/~az">Andrew Zisserman<br>University of Oxford</td>
                             </tr>
                         </table>
                     </div>
