@@ -1,295 +1,277 @@
-
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-		<title>Self Supervised Learning: What is Next? - ECCV 2024</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Supervised Learning: What is Next? - ECCV 2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    <meta property='og:title' content="Self Supervised Learning: What is Next? - ECCV 2024"/>
-    <!-- <meta property='og:image' content='http://sightsound.org/dog-sight-sound11.png /> -->    
-	</head>
-	<body>
-		<!-- Wrapper -->
-        <div id = "wrapper">
-            <!-- Header-->
-            <header id="header" class = "alt" style = "width: 100%">
-                <!-- <div class = "bgimg" style = "height: 475px">-->
-                <div class = "bgimg" style = "height: 150px; width: 100%">
-                  <div style = "height: 20px; width: 100%"></div>
-                  <h1 style = "text-shadow: 0.1px 0.1px #000000">Self Supervised Learning: What is Next?</h1>
-                  <a href="https://eccv2024.ecva.net/" style="text-decoration: none; color: inherit;">
-                    <h2 style="text-shadow: 0.1px 0.1px #000000">ECCV 2024 - September 29th AM, MiCo Milano</h2>
-                </a>
-                                  <!-- <h2 style = "text-shadow: 0.1px 0.1px #000000">Organizers: Michael Dorkenwald, Mert Bulent Sariyildiz, Christian Rupprecht, Hilde Kuehne, Serge Belongie. </h2> -->
+        .header {
+            background: url('images/background.jpg') no-repeat center center/cover;
+            height: 300px;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
 
-                  
+        .header .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-                  <!-- <h2 style = "text-shadow: 0.1px 0.1px #000000">ECCV 2024 - October 23rd, David Intercontinental Hotel, Salon C</h2> -->
+        .header h1 {
+            margin: 0;
+            padding: 10px;
+            font-size: 3em; /* Increased font size for more prominence */
+        }
+
+        .header h2 {
+            margin: 0;
+            padding: 10px;
+            font-size: 2em;
+        }
+
+        .header h2 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0;
+        }
+
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            gap: 1.5rem; /* Space between grid items */
+            justify-items: center; /* Center items in each grid cell */
+        }
+
+        .speaker {
+            text-align: center;
+            width: 200px;
+        }
+
+        .speaker img {
+            border-radius: 60%;
+            width: 180px;
+            height: 180px;
+            border: 2px solid #333;
+        }
+
+        .speaker a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .rounded-img-dark {
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+
+        .placeholder {
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="overlay">
+            <h1>Self Supervised Learning: What is Next?</h1>
+            <h2><a href="https://eccv2024.ecva.net/">ECCV 2024 - September 29th AM, MiCo Milano</a></h2>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#info">Organizers</a></li>
+            <li><a href="index2022.html">ECCV 2022</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="intro">
+            <h2>Summary</h2>
+            <p>Training robust visual models from unlabeled data is a long-standing problem, as human-provided annotations are often costly, error-prone, and incomplete. Consequently, self-supervised learning (SSL) has become an attractive research direction for learning generic visual representations useful for a wide range of downstream tasks such as classification and semantic segmentation. SSL operates on the principle of pretext tasks, self-generated challenges that encourage models to learn from the data's inherent structure. Initially, these tasks were relatively simplistic, such as predicting the rotation of an image or restoring its original colors. These early experiments laid the groundwork for more sophisticated techniques that extract deeper understandings from visual content through, e.g. contrastive learning or deep clustering.</p>
+            <p>Although these methods have already outperformed supervised representations in numerous downstream tasks, the field continues to advance at an unprecedented pace, introducing many new techniques. Some of the directions are predictive architectures removing the need for augmentation, masked image modeling, auto-regressive approaches, leveraging the self-supervision signals in videos, and exploiting the representations of generative models.</p>
+            <p>With so many new techniques flooding the field, it is important to pause and discuss how we can make optimal use of self-supervised representations in applications, as well as what are the remaining obstacles and possible approaches to tackle them. The workshop aims to give space to ask and discuss fundamental, longer-term questions with researchers leading this area. Key questions we aim to tackle include:</p>
+            <ul>
+                <li>What are the current bottlenecks in self-supervised learning?</li>
+                <li>What is the role of SSL in the era of powerful image-text models?</li>
+                <li>What can only or never be learned purely from self-supervision?</li>
+                <li>What is the role of generative modeling for representation learning?</li>
+                <li>Is SSL the new `pre-pretraining' paradigm, allowing to scale beyond coupled image-text data?</li>
+                <li>What biases emerge in SSL models, and what are the implications?</li>
+                <li>What is the role of multi-modal learning for robustness and understanding?</li>
+                <li>What is the fundamental role of data augmentation and synthetic data?</li>
+            </ul>
+            <p>This is the third iteration of the SSL-WIN workshop. The workshop will be organized as a half-day event where a series of invited speakers will present their views on how the field needs to evolve in the coming years.</p>
+        </section>
+
+        <section id="speakers">
+            <h2>Invited Speakers</h2>
+            <div class="speakers-grid">
+                <div class="speaker">
+                    <img src="photos/asano.jpg" alt="Yuki M Asano">
+                    <a href="https://yukimasano.github.io/">Yuki M. Asano<br>Univeristy of Amsterdam</a>
                 </div>
-            </header>
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#intro" class="active">Introduction</a></li>
-                    <!-- <li><a href="#videos">Videos</a></li> -->
-                    <li><a href="#format">Format</a></li>
-                    <!-- <li><a href="#cfp">Call for Papers</a></li> -->
-                    <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#speakers">Speakers</a></li>
-                    <li><a href="#info">Organizers</a></li>
-                    <li><a href="index2022.html">ECCV 2022</a></li>
-                </ul>
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-                <!-- Introduction -->
-                <section id="intro" class="main">
-                    <header class="major" style="text-align:center">
-                        <h2>Summary</h2>
-                    </header>
-                    <div class="spotlight" style="width: 90%; margin: auto;">
-                        <div class="content">
-                            <p>
-                            Training robust visual models from unlabeled data is a long-standing problem, as human-provided annotations are often costly, error-prone, and incomplete. Consequently, self-supervised learning (SSL) has become an attractive research direction for learning generic visual representations useful for a wide range of downstream tasks such as classification and semantic segmentation.
-                            SSL operates on the principle of pretext tasks, self-generated challenges that encourage models to learn from the data's inherent structure.
-                            Initially, these tasks were relatively simplistic, such as predicting the rotation of an image or restoring its original colors. These early experiments laid the groundwork for more sophisticated techniques that extract deeper understandings from visual content through, e.g. contrastive learning or deep clustering.
-                            </p>
-                            <p>
-                            Although these methods have already outperformed supervised representations in numerous downstream tasks, the field continues to advance at an unprecedented pace, introducing many new techniques.
-                            Some of the directions are predictive architectures removing the need for augmentation, masked image modeling, auto-regressive approaches, leveraging the self-supervision signals in videos, and 
-                            exploiting the representations of generative models.
-                            </p>
-                            <p>
-                                With so many new techniques flooding the field, it is important to pause and discuss how we can make optimal use of self-supervised representations in applications, as well as what are the remaining obstacles and possible approaches to tackle them.
-                                The workshop aims to give space to ask and discuss fundamental, longer-term questions with researchers leading this area.
-                                Key questions we aim to tackle include:
-                                <ul style="padding-left: 20px;">
-                                    <li>What are the current bottlenecks in self-supervised learning?</li>
-                                    <li>What is the role of SSL in the era of powerful image-text models?</li>
-                                    <li>What can only or never be learned purely from self-supervision?</li>
-                                    <li>What is the role of generative modeling for representation learning?</li>
-                                    <li>Is SSL the new `pre-pretraining' paradigm, allowing to scale beyond coupled image-text data?</li>
-                                    <li>What biases emerge in SSL models, and what are the implications?</li>
-                                    <li>What is the role of multi-modal learning for robustness and understanding?</li>
-                                    <li>What is the fundamental role of data augmentation and synthetic data?</li>
-                                </ul>
-                            </p>
-                            <p>
-                                This is the third iteration of the SSL-WIN workshop. The workshop will be organized as a half-day event where a series of invited speakers will present their views on how the field needs to evolve in the coming years. 
-                            <!-- #and a students at the poster sessions will present their views  -->
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <section id="format" class="main">
-                    <header class="major" style="text-align:center">
-                        <h2>Format</h2>
-                    </header>
-                    <div class="spotlight" style="width: 90%; margin: auto;">
-                        <div class="content">
-                            <p>
-                                The workshop is a half-day event. It will consist of a series of invited talks on recent developments on self-supervised learning from the leading experts in academia and industry. This year's workshop will not include a call for papers.
-                                 <!-- as well as a poster session. The poster sessions features the latest works on SSL. -->
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="schedule" class="main special">
-                    <header class="major" style="text-align:center">
-                        <h2>Schedule</h2>
-                    </header>
-                    <p> TBD.</p>
-                    <!-- <div class="table-wrapper" style ="width:100%">
-                        <table class="alt">
-                            <tbody>
-                                <col width="20%">
-                                <col width="25%">
-                                <col width="60%">
-                                <tr>
-                                    <td>9:00-9:20</td>
-                                    <td>Welcome</td>
-                                    <td>
-					<button type="button" class="collapsible"><a href="https://docs.google.com/presentation/d/1-1VO2O-lS5gXyLoAjic42e6gjlZtQi7BCaANIi5MR8s/edit?usp=sharing">slides</a></button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-				    </td>
-                                </tr>
-                                <tr>
-                                    <td>9:20-10:00</td>
-                                    <td>Alexei (Alyosha) Efros</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Adapting to New Data and New Tasks with Self-supervision</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>10:00-10:40</td>
-                                    <td>Mathilde Caron</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Masked Siamese Network for Label Efficient Learning</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>10:40-11:00</td>
-                                    <td></td>
-                                    <td>Break</td>
-                                </tr>
-                                <tr>
-                                    <td>11:00-11:40</td>
-                                    <td>Ishan Misra</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Representation learning beyond a single dataset and modality</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:40-12:20</td>
-                                    <td>Andrea Vedaldi</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Unsupervised 3D perception</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>12:20-14:00</td>
-                                    <td></td>
-                                    <td>Lunch</td>
-                                </tr>
-                                <tr>
-                                    <td>14:00-14:40</td>
-                                    <td>Arsha Nagrani</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Use what you already have: Weak supervision from existing models and other modalities</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>14:40-15:40</td>
-                                    <td></td>
-                                    <td>Poster Session</td>
-                                </tr>
-                                <tr>
-                                    <td>15:40-16:20</td>
-                                    <td>Linda Smith</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Self-generated data: Lessons from toddlers</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>16:20-17:00</td>
-                                    <td>Jean-Baptiste Alayrac</td>
-                                    <td>
-                                        <button type="button" class="collapsible">Reflections on Multimodal Self-Supervised Learning</button>
-                                        <div class="collapsible_content"><p>TBD</p></div>
-                                    </td>
-                                </tr>
-                        </tbody>
-                      </table>
-                  </div> -->
-                </section>
-                <section id="speakers" class="main special">
-                    <header class="major" style="text-align:center">
-                        <h2>Speakers</h2>
-                    </header>
-                    <div class="table-wrapper" style ="width:100%">
-                        <table cellpadding = "0" cellspacing = "0">
-                            <tr>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/asano.jpg"><br><a href="https://yukimasano.github.io/">Yuki M Asano<br>Uni. of Amsterdam</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/yutong.jpg"><br><a href="https://yutongbai.com/">Yutong Bai<br>UC Berkeley</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/lecun.jpeg"><br><a href="http://yann.lecun.com/">Yann LeCun*<br>Meta AI & NYU</a></td>
-                            </tr><tr>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/khe.jpeg"><br><a href="https://people.csail.mit.edu/kaiming/">Kaiming He*<br>MIT</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/olivierhenaff.jpg"><br><a href="https://www.olivierhenaff.com/">Olivier J. Hénaff<br>Google DeepMind</a></td>
-                                <td><img class="rounded-img-dark" height="125px" src="photos/osimeoni.jpg"><br><a href="https://osimeoni.github.io/">Oriane Siméoni<br>valeo.ai</a></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <p style="text-align:center; font-style: italic;">* Tentatively confirmed speakers</p>
-                </section>
-                
-						
-                <section id="info" class="main special">
-                    <header class="major">
-                        <h2>Organizers</h2>
-                    </header>
-                    <div class="table-wrapper" style ="width:100%">
-                        <table cellpadding = "0" cellspacing = "0">
-                            <tr>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/mdorkenwald.jpeg"><br><a href = "https://mdorkenwald.com/">Michael Dorkenwald<br> University of Amsterdam</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/mert.png"><br><a href = "https://mbsariyildiz.github.io/">Mert Bulent Sariyildiz<br>NAVER LABS Europe</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/rupprecht.jpg"><br><a href = "http://chrirupp.github.io">Christian Rupprecht<br>University of Oxford</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/Hilde.jpg"><br><a href = "https://hildekuehne.github.io/">Hilde Kuehne<br>University of Bonn</a></td>
-                                <td><img class = "rounded-img-dark" height = "125px" src = "photos/sbelongie.png"><br><a href = "https://sergebelongie.github.io/">Serge Belongie<br>University of Copenhagen</td>
-                            </tr>
-                        </table>
-                    </div>
-                </section>
+                <div class="speaker">
+                    <img src="photos/yutong.png" alt="Yutong Bai">
+                    <a href="https://yutongbai.com/">Yutong Bai<br>UC Berkeley</a>
+                </div>
+                <div class="speaker">
+                    <img src="photos/olivierhenaff.jpg" alt="Olivier J. Hénaff">
+                    <a href="https://www.olivierhenaff.com/">Olivier J. Hénaff<br>Google DeepMind</a>
+                </div>
+                <div class="speaker">
+                    <img src="photos/osimeoni.jpg" alt="Oriane Siméoni">
+                    <a href="https://osimeoni.github.io/">Oriane Siméoni<br>valeo.ai</a>
+                </div>
+                <div class="speaker">
+                    <div class="placeholder"></div>
+                    <a href="#">TBD<br></a>
+                </div>
+                <div class="speaker">
+                    <div class="placeholder"></div>
+                    <a href="#">TBD<br></a>
+                </div>
             </div>
+        </section>
 
-                 
-            <!-- Footer -->
-            <footer id="footer">
-                <p class = "copyright" style="font-size:medium">
-                    Website design adapted from <a href = "http://sightsound.org">sightsound.org</a>
-                    and based on a template from <a href="https://html5up.net">HTML5 UP</a>.
-                </p>
-            </footer>
-			</div>
+        <section id="format">
+            <h2 style="font-size: 2.5m;">Poster Session</h2>
+            <p>We invite you to present a poster at our workshop. If interested, please complete this <a href="https://forms.gle/RsRUDCd46myhFqer9">Google Form</a> by August 14th. We welcome projects that have been accepted at other conferences or workshops. The organizers will conduct a soft review of the submitted papers. Decisions will be announced on August 20th, and accepted papers will be listed below. Note that these papers will not be included in the ECCV proceedings.</p>
+        </section>
 
-		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <!--[if lte IE 8]>
-        <script src="assets/js/ie/respond.min.js"></script><![endif]-->
-        <!-- <script src="assets/js/main.js"></script> -->
-    <script>
-      function convertDateAndTimezone(timeStr) {
-        var newDate = new Date("2020-08-28T"+timeStr+":00.000Z");
-        return newDate.toString();   
-      }
-      
-	    function convertTime(timeStr) {
-        var newDate = new Date("2020-08-28T"+timeStr+":00.000Z");
-        return newDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});   
-      }
-      
-      function convertTimeRange(rangeStr) {
-        var s = rangeStr.split('-')
-        return convertTime(s[0]) + ' - ' + convertTime(s[1]);   
-      }
-      
-      $( document ).ready(function() {
-        $( ".convertTime" ).each(function( index ) {
-          $(this).text(convertTime($(this).text()));
-        });
+        <section id="schedule">
+            <h2 style="font-size: 3m;">Schedule</h2>
+            <p>The workshop is a half-day event consisting of a series of invited talks on recent developments on self-supervised learning from the leading experts in academia and industry and a poster session. Exact schedule coming in the next weeks.</p>
+        </section>
 
-        $( ".convertDate" ).each(function( index ) {
-          $(this).text(convertDateAndTimezone($(this).text()));
-        });
-
-        $( ".convertTimeRange" ).each(function( index ) {
-          $(this).text(convertTimeRange($(this).text()));
-        });
         
-        $( ".collapsible" ).click(function() {
-            $(this).toggleClass("active");
-            $(this).next().toggle();
-        });
-      });
-	  </script>
-	</body>
+
+        <section id="info" class="main special">
+            <header class="major">
+                <h2>Organizers</h2>
+            </header>
+            <div class="table-wrapper" style="width:100%">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <img class="rounded-img-dark" height="125px" src="photos/mdorkenwald.jpeg">
+                            <br>
+                            <a href="https://mdorkenwald.com/">Michael Dorkenwald<br>University of Amsterdam</a>
+                        </td>
+                        <td>
+                            <img class="rounded-img-dark" height="125px" src="photos/mert.png">
+                            <br>
+                            <a href="https://mbsariyildiz.github.io/">Mert Bulent Sariyildiz<br>NAVER LABS Europe</a>
+                        </td>
+                        <td>
+                            <img class="rounded-img-dark" height="125px" src="photos/rupprecht.jpg">
+                            <br>
+                            <a href="http://chrirupp.github.io">Christian Rupprecht<br>University of Oxford</a>
+                        </td>
+                        <td>
+                            <img class="rounded-img-dark" height="125px" src="photos/Hilde.jpg">
+                            <br>
+                            <a href="https://hildekuehne.github.io/">Hilde Kuehne<br>University of Bonn</a>
+                        </td>
+                        <td>
+                            <img class="rounded-img-dark" height="125px" src="photos/sbelongie.png">
+                            <br>
+                            <a href="https://sergebelongie.github.io/">Serge Belongie<br>University of Copenhagen</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Self Supervised Learning: What is Next? - ECCV 2024. All rights reserved.</p>
+    </footer>
+</body>
 </html>
